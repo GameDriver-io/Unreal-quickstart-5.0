@@ -1,4 +1,8 @@
-# Unreal-quickstart for UNREAL 5.0.3 (Use the Unreal5.1 Branch for Unreal 5.1 projects, or the main branch for 4.27 support)
+# Unreal 5.0 Quickstart
+
+The files in this repository are targeted towards Unreal 5.0.3. 
+- For Unreal 4.27 users, check out the [Unreal 4.27 Version of the plugin](https://github.com/GameDriver-io/Unreal-quickstart/)
+- For Unreal 5.1 users, check out the [Unreal 5.1 Version of the plugin](https://github.com/GameDriver-io/Unreal-quickstart/tree/Unreal5.1)
 
 ## Concept
 
@@ -21,6 +25,12 @@ This repository contains a folder called "Managed" filled with dll files. It als
 4. Open the project and click run to see the GDIO panel displaying. (you can hide it if you want in configuration files)
 5. Now you're ready to write external tests! You can connect to the running agent from your own test project using Gamedriver's unreal_api.
 
+## Common issues
+
+1. In order to simulate mouse clicks in the editor you will need to unset the "High DPI Support" flag in the editor preferences
+![Screenshot of the editor preference window, to illustrate how to disable "High DPI Support" ](https://github.com/GameDriver-io/Unreal-quickstart/blob/main/img/EditorPreferences.png)
+2. You may want to build clean for your project. Doing so will delete the precompiled binaries for the plugin. To recitify this copy the "Binary" and " Intermediate" folders from within the original plugin to your project's Plugin folder after making clean (or recopy the entire Plugin folder - if you prefer) 
+
 ## Summary
 
 Your final Project will look like the following:
@@ -35,3 +45,5 @@ SomeProjectPath/
 └─ MyProject.uproject	
 └─ MyProject.sln	
 ```
+
+## Note: This build is currently in Beta. 
