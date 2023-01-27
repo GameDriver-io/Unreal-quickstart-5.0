@@ -13,10 +13,11 @@ The files in this repository are targeted towards Unreal 5.0.3.
 
 ## What is in this repository
 
-This repository contains a folder called "Managed" filled with dll files. It also contains a folder called "Plugin" containing a binary plugin. 
+This repository contains a folder called "Managed" filled with dll files. It also contains a folder called "Plugin" containing a binary plugin. The gdio.unreal_api folder contains dlls for use in your test program. 
 
 - Managed
 - Plugin
+- gdio.unreal_api
 
 ## What you do next. 
 
