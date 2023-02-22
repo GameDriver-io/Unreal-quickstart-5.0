@@ -4,7 +4,7 @@
 
 The files in this repository are targeted towards Unreal 5.0.3. 
 - For Unreal 4.27 users, check out the [Unreal 4.27 Version of the plugin](https://github.com/GameDriver-io/Unreal-quickstart/)
-- For Unreal 5.1 users, check out the [Unreal 5.1 Version of the plugin](https://github.com/GameDriver-io/Unreal-quickstart/tree/Unreal5.1)
+- For Unreal 5.1 users, check out the [Unreal 5.1 Version of the plugin](https://github.com/GameDriver-io/Unreal-quickstart5.1)
 
 ## Concept
 
