@@ -1,5 +1,5 @@
 {
-	"FileVersion": 1,
+	"FileVersion": 3,
 	"Version": 1,
 	"VersionName": "1.0",
 	"FriendlyName": "GameDriver.io",
@@ -10,17 +10,15 @@
 	"DocsURL": "https://gamedriver.io/",
 	"MarketplaceURL": "",
 	"SupportURL": "",
-	"EnabledByDefault": true,
+	"EngineVersion": "5.0.0",
 	"CanContainContent": true,
-	"IsBetaVersion": true,
-	"IsExperimentalVersion": false,
 	"Installed": true,
 	"Modules": [
 		{
 			"Name": "UnrealCLR",
 			"Type": "Runtime",
 			"LoadingPhase": "PreLoadingScreen",
-			"WhitelistPlatforms": [
+			"PlatformAllowList": [
 				"Win64"
 			]
 		},
@@ -28,7 +26,7 @@
 			"Name": "HPathDebugger",
 			"Type": "Editor",
 			"LoadingPhase": "Default",
-			"WhitelistPlatforms": [
+			"PlatformAllowList": [
 				"Win64"
 			]
 		}

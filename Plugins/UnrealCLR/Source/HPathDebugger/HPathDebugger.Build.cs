@@ -12,7 +12,7 @@ public class HPathDebugger : ModuleRules {
 
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
-            		bUsePrecompiled = true;
+         	bUsePrecompiled = true;
 
         OptimizeCode = CodeOptimization.Never;
         
@@ -24,7 +24,7 @@ public class HPathDebugger : ModuleRules {
 
         
         PublicDependencyModuleNames.AddRange(new string[] {
-			"Core", "UnrealCLR"
+			"Core", "UnrealCLR", "SceneOutliner", "LevelEditor"
         });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {

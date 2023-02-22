@@ -5,6 +5,9 @@
 #include "Widgets/Docking/SDockableTab.h"
 #include "Widgets/Docking/SDockTabStack.h"
 #include "Widgets/Text/SRichTextBlock.h"
+#else
+#include "Templates/SharedPointerInternals.h"
+#include "Templates/SharedPointer.h"
 #endif
 
 #include "GDIOInput.h"
@@ -13,6 +16,7 @@
 #include "SlateBasics.h"
 #include "Blueprint/WidgetTree.h"
 #include "GenericPlatform/GenericPlatformProcess.h"
+
 class RecorderToolPanel : public SCompoundWidget
 {
 
@@ -84,5 +88,9 @@ protected:
 	TSharedPtr<SScrollBox> outputScroll;
 	TArray<FString> *outputArray;
 	//The IInputProcessor
+#if ENGINE_MAJOR_VERSION == 4
 	SharedPointerInternals::FRawPtrProxy< FGDIOInput > inputProcessor = NULL;
+#else
+	TSharedPtr< class FGDIOInput > inputProcessor = NULL;
+#endif
 };
