@@ -1,3 +1,4 @@
+
 # Unreal 5.0 Quickstart
 ## Note: This build is currently in Beta.
 
@@ -12,6 +13,7 @@ The files in this repository are targeted towards Unreal 5.0.3.
 3. Once running, you will need to grab the api from our website, and connect to the game using it. 
 
 ## What is in this repository
+
 
 This repository contains a folder called "Managed" filled with dll files. It also contains a folder called "Plugin" containing a binary plugin. The gdio.unreal_api folder contains dlls for use in your test program. 
 
@@ -30,7 +32,9 @@ This repository contains a folder called "Managed" filled with dll files. It als
 ## Common issues
 
 1. In order to simulate mouse clicks in the editor you will need to unset the "High DPI Support" flag in the editor preferences
+
 ![Screenshot of the editor preference window, to illustrate how to disable "High DPI Support" ](https://github.com/GameDriver-io/Unreal-quickstart/blob/main/img/EditorPreferences.png)
+
 2. You may want to build clean for your project. Doing so will delete the precompiled binaries for the plugin. To recitify this copy the "Binary" and " Intermediate" folders from within the original plugin to your project's Plugin folder after making clean (or recopy the entire Plugin folder - if you prefer) 
 
 ## Summary
@@ -46,5 +50,7 @@ SomeProjectPath/
    └─ GameDriver	<----- You should see a GameDriver folder here 
 └─ MyProject.uproject	
 └─ MyProject.sln	
+
 ```
+
 
