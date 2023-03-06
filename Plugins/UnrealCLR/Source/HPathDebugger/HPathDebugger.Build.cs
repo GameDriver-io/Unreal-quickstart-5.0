@@ -14,9 +14,10 @@ public class HPathDebugger : ModuleRules {
 
          	bUsePrecompiled = true;
 
+
         OptimizeCode = CodeOptimization.Never;
         
-        PrecompileForTargets = PrecompileTargetsType.Any;
+        //PrecompileForTargets = PrecompileTargetsType.Any;
 
         PublicIncludePaths.AddRange(new string[] { Path.Combine(ModuleDirectory, "Public") });
 
@@ -24,7 +25,7 @@ public class HPathDebugger : ModuleRules {
 
         
         PublicDependencyModuleNames.AddRange(new string[] {
-			"Core", "UnrealCLR", "SceneOutliner", "LevelEditor"
+			"Core", "UnrealCLR", "SceneOutliner", "LevelEditor", "WorldBrowser"
         });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {

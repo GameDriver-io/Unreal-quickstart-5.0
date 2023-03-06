@@ -37,14 +37,14 @@ public class UnrealCLR : ModuleRules {
 
 		OptimizeCode = CodeOptimization.Never;
 
-         PrecompileForTargets = PrecompileTargetsType.Any;
+        // PrecompileForTargets = PrecompileTargetsType.Any;
         	bUsePrecompiled = true;
         PublicIncludePaths.AddRange(new string[] { });
 
 		PrivateIncludePaths.AddRange(new string[] { "../../../../../../UE_4.27/Engine/Plugins/Experimental/CommonUI/Source/CommonUI/Private/" });
 
 		PublicDependencyModuleNames.AddRange(new string[] {
-			"Core", "ApplicationCore"
+			"Core", "ApplicationCore", "AugmentedReality"
         });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {
