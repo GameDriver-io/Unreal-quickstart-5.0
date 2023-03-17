@@ -65,6 +65,21 @@
             d = api.GetObjectDistance("//*[@name = 'CubeA']", "//*[@name = 'CubeB']");
             Console.WriteLine(d.ToString()); // prints -5.0,-3.0,-1.0</code></example>
         </member>
+        <member name="M:gdio.unreal_api.ApiClient.GetObjectFieldValue``1(System.String,System.Int32)">
+            <summary>
+            This method returns the field or property value of an object.
+            </summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> of the field or property to be inspected.</typeparam>
+            <param name="hierarchyPath">The HierarchyPath of the object and field/property to be inspected.</param>
+            <param name="timeout">The timeout in seconds to wait for a response that the request was processed by the GameDriver agent.</param>
+            <returns> Returns an object of type T for the value or throws an <see cref="T:System.Exception"/> on error.</returns>
+            <example> // Searches for an object named 'HiddenCube' which is invisible in the scene, and checks whether the "Active" checkbox is enabled.
+            <code escaped="true">
+            bool invisCube = api.GetObjectFieldValue&lt;bool&gt;("//*[@name='HiddenCube']/fn:component('UnityEngine.Behaviour')/@isActiveAndEnabled");
+            Assert.IsTrue(invisCube == false, "The invisible cube isn't active"); //Passes if the object is Active in the scene
+            </code>
+            </example>
+        </member>
         <member name="M:gdio.unreal_api.ApiClient.GetObjectFieldValue``1(System.String,System.String,System.Int32)">
             <summary>
             This method returns the field or property value of an object.
@@ -275,7 +290,7 @@
             <example><code escaped="true">//Loads the FinalBoss scene
             api.LoadScene("FinalBoss");</code></example>
         </member>
-        <member name="M:gdio.unreal_api.ApiClient.Click(gdio.common.objects.MouseButtons,gdio.common.objects.Vector2,System.Int32,System.Int32)">
+        <member name="M:gdio.unreal_api.ApiClient.Click(gdio.common.objects.MouseButtons,gdio.common.objects.Vector2,System.UInt64,System.Int32)">
             <summary>
             Use this function to perform in-game mouse-clicks.
             </summary>        
@@ -335,7 +350,7 @@
                 new KeyCode[] { KeyCode.LeftShift }, 3,
                 500, 30);</code></example>
         </member>
-        <member name="M:gdio.unreal_api.ApiClient.MouseDrag(gdio.common.objects.MouseButtons,gdio.common.objects.Vector2,System.Int32,gdio.common.objects.Vector2,System.Boolean,System.Int32)">
+        <member name="M:gdio.unreal_api.ApiClient.MouseDrag(gdio.common.objects.MouseButtons,gdio.common.objects.Vector2,System.UInt64,gdio.common.objects.Vector2,System.Boolean,System.Int32)">
             <summary>
             Perform a mouse drag operation.
             </summary>
@@ -362,7 +377,7 @@
             <example><code escaped="true">//Moves the mouse to the center of the object named "Cylinder" over 300 frames
             api.MouseMoveToObject("//*[@name='Cylinder']", 300, true, true);</code></example>
         </member>
-        <member name="M:gdio.unreal_api.ApiClient.MouseMoveToPoint(gdio.common.objects.Vector2,System.Int32,gdio.common.objects.Vector2,System.Boolean,System.Int32)">
+        <member name="M:gdio.unreal_api.ApiClient.MouseMoveToPoint(gdio.common.objects.Vector2,System.UInt64,gdio.common.objects.Vector2,System.Boolean,System.Int32)">
              <summary>
              Move the mouse to the destination vector.
              </summary>
@@ -840,7 +855,7 @@
             <summary>
             Use this function to send arbitrary Vector3 Event states to the game.
             </summary>
-            <param name="inputControlPath">The Input Control Path for the New Input System</param>
+            <param name="inputControlPath">The Input Control Path</param>
             <param name="value">Value of the Vector3 event</param>
             <param name="numberOfFrames">The number of frames to press and hold the axis for.</param>
             <param name="timeout">The timeout in seconds to wait for a response that the request was processed by the GameDriver agent.</param>
@@ -857,13 +872,23 @@
             <param name="VRdevice">The Device you added earlier (unused for now)  </param>
             <param name="position">Value of the Vector3 event</param>
             <param name="orientation">Orientation.</param>
-            <param name="index">0= HMD, 1= Left, 2 = Right</param>
+            <param name="index">0= HMD, 1= Right, 2 = Left</param>
             <param name="timeout">The timeout in seconds to wait for a response that the request was processed by the GameDriver agent.</param>
             <returns> TRUE if the GameDriver agent successfully processed the request.</returns>
             <example><code escaped="true">
             
-            api.VRInput("Left", new Vector3(0, 0, 5), api.EulerToQuat(-10, 0, 0), 0); //Move the left controller to the coordinates relative to the HMD.
+            api.VRInput("", new Vector3(0, 0, 5), api.EulerToQuat(-10, 0, 0), 2); //Move the left controller to the coordinates relative to the HMD.
             </code></example>
+        </member>
+        <member name="T:gdio.unreal_api.UE4.KeyCode">
+            <summary>
+            Keycode is a mapping of EKeys from UnrealEngine. 
+            </summary>
+        </member>
+        <member name="T:gdio.unreal_api.UE5.KeyCode">
+            <summary>
+            Keycode is a mapping of EKeys from UnrealEngine.
+            </summary>
         </member>
     </members>
 </doc>

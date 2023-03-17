@@ -24,7 +24,6 @@ protected:
 	// UI Command functions
 	void MenuCommand1();
 	void MenuCommand2();
-	void MenuCommand3();
 	void RegisterMenuExtensions();
 
 	TSharedRef<FExtender> OnExtendLevelEditorMenu(const TSharedRef<FUICommandList> CommandList, TArray<AActor*> SelectedActors);

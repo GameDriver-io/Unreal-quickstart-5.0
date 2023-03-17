@@ -1,6 +1,9 @@
+#Release Notes
+- Added VR support
+- Added Object Explorer
+- Various small improvements. 
 
 # Unreal 5.0 Quickstart
-## Note: This build is currently in Beta.
 
 The files in this repository are targeted towards Unreal 5.0.3. 
 - For Unreal 4.27 users, check out the [Unreal 4.27 Version of the plugin](https://github.com/GameDriver-io/Unreal-quickstart/)
