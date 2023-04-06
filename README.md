@@ -2,6 +2,8 @@
 - Added VR support
 - Added Object Explorer
 - Various small improvements. 
+- Improved HPath debugger
+- Added regular expressions and more in Hpath. 
 
 # Unreal 5.0 Quickstart
 
