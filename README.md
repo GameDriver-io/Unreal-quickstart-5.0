@@ -1,9 +1,11 @@
+v1.1 RC2
 #Release Notes
 - Added VR support
 - Added Object Explorer
 - Various small improvements. 
 - Improved HPath debugger
 - Added regular expressions and more in Hpath. 
+- foreach and other list function added. 
 
 # Unreal 5.0 Quickstart
 
