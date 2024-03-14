@@ -1,11 +1,11 @@
-v1.1 RC2
-#Release Notes
+# 2024.03 Release Notes
+
 - Added VR support
 - Added Object Explorer
-- Various small improvements. 
+- Various small improvements
 - Improved HPath debugger
-- Added regular expressions and more in Hpath. 
-- foreach and other list function added. 
+- Added regular expressions and more in HPath
+- foreach and other list functions added 
 
 # Unreal 5.0 Quickstart
 
@@ -15,14 +15,13 @@ The files in this repository are targeted towards Unreal 5.0.3.
 
 ## Concept
 
-1. Gamedriver works by placing an small plugin in your game. That plugin communucates with our api, which you use to drive your game remotely.
+1. Gamedriver works by placing a small plugin in your game. That plugin communicates with our API, which you use to drive your game remotely.
 2. Setting up the plugin requires moving two folders into their correct locations in your project and downloading the license to the correct location.
-3. Once running, you will need to grab the api from our website, and connect to the game using it. 
+3. Once running, you will need to grab the API from our website and connect to the game using it. 
 
 ## What is in this repository
 
-
-This repository contains a folder called "Managed" filled with dll files. It also contains a folder called "Plugin" containing a binary plugin. The gdio.unreal_api folder contains dlls for use in your test program. 
+This repository contains a folder called "Managed" filled with .DLL files. It also contains a folder called "Plugin" containing a binary plugin. The gdio.unreal_api folder contains DLLs for use in your test program. 
 
 - Managed
 - Plugin
@@ -42,7 +41,7 @@ This repository contains a folder called "Managed" filled with dll files. It als
 
 ![Screenshot of the editor preference window, to illustrate how to disable "High DPI Support" ](https://github.com/GameDriver-io/Unreal-quickstart/blob/main/img/EditorPreferences.png)
 
-2. You may want to build clean for your project. Doing so will delete the precompiled binaries for the plugin. To recitify this copy the "Binary" and " Intermediate" folders from within the original plugin to your project's Plugin folder after making clean (or recopy the entire Plugin folder - if you prefer) 
+2. You may want to build clean for your project. Doing so will delete the precompiled binaries for the plugin. To rectify this copy the "Binary" and " Intermediate" folders from within the original plugin to your project's Plugin folder after making clean (or recopy the entire Plugin folder - if you prefer) 
 
 ## Summary
 
